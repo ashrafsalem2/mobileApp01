@@ -8,4 +8,8 @@ class kConstants {
   );
 
   static const TextStyle detailsStyle = TextStyle(fontSize: 16.0);
+
+  static const String kLightTheme = "kLightTheme";
 }
+
+

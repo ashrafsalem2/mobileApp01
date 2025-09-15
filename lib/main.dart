@@ -1,13 +1,34 @@
+import 'package:first_app/Data/constant.dart';
 import 'package:first_app/Data/notifires.dart';
 import 'package:first_app/screens/pages/welocme_page.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
+    super.initState();
+    
+    showTheSavedTheme();
+    
+  }
+
+  void showTheSavedTheme() async{
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    final String? theme = prefs.getString(kConstants.kLightTheme);
+    isDarkMode.value = theme ?? false;
+  }
 
   @override
   Widget build(BuildContext context) {
