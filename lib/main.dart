@@ -19,14 +19,13 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    
+
     showTheSavedTheme();
-    
   }
 
-  void showTheSavedTheme() async{
+  void showTheSavedTheme() async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
-    final String? theme = prefs.getString(kConstants.kLightTheme);
+    final bool? theme = prefs.getBool(kConstants.kLightTheme);
     isDarkMode.value = theme ?? false;
   }
 

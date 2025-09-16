@@ -1,10 +1,9 @@
 import 'package:first_app/screens/auth/login_page.dart';
-import 'package:first_app/screens/auth/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-class WelcomePage extends StatelessWidget {
-  const WelcomePage({super.key});
+class SplashPage extends StatelessWidget {
+  const SplashPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,15 +16,15 @@ class WelcomePage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Lottie.asset('assets/lotties/Summer.json', height: 300),
+                  Lottie.asset('assets/lotties/run.json', height: 300),
                   SizedBox(height: 10),
                   FittedBox(
                     child: Text(
-                      "My App, where you find your space.",
+                      "Lets Join our app",
                       style: TextStyle(
-                        letterSpacing: 50,
                         fontSize: 50,
-                        fontWeight: FontWeight.w700,
+                        letterSpacing: 50,
+                        fontWeight: FontWeight.w800,
                       ),
                     ),
                   ),
@@ -36,23 +35,10 @@ class WelcomePage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) {
-                            return LoginPage(title: "Login");
+                            return LoginPage(title: "Register");
                           },
                         ),
                         (route) => false,
-                      );
-                    },
-                    style: FilledButton.styleFrom(
-                      minimumSize: Size(double.infinity, 40),
-                    ),
-                    child: Text("Login"),
-                  ),
-                  SizedBox(height: 5),
-                  TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => SplashPage()),
                       );
                     },
                     style: FilledButton.styleFrom(

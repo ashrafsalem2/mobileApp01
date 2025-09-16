@@ -58,14 +58,14 @@ class _LoginPageState extends State<LoginPage> {
                   onEditingComplete: () {},
                 ),
                 SizedBox(height: 20),
-                ElevatedButton(
+                FilledButton(
                   onPressed: () {
                     onLogginPressed();
                   },
-                  style: ElevatedButton.styleFrom(
+                  style: FilledButton.styleFrom(
                     minimumSize: Size(double.infinity, 50),
                   ),
-            
+
                   child: Text(widget.title),
                 ),
               ],
