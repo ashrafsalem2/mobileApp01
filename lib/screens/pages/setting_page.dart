@@ -25,6 +25,26 @@ class _SettingPageState extends State<SettingPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Row(
+                children: [
+                  Flexible(
+                    flex: 4,
+                    child: Container(
+                      height: 20,
+                      color: Colors.amber[800],
+                      child: Text('child 1'),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: Container(
+                      height: 20,
+                      color: Colors.green[300],
+                      child: Text('child 2'),
+                    ),
+                  ),
+                ],
+              ),
               ElevatedButton(
                 onPressed: () {
                   ScaffoldMessenger.of(context).showSnackBar(

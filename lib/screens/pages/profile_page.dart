@@ -11,6 +11,13 @@ class ProfilePage extends StatelessWidget {
       child: SafeArea(
         child: Column(
           children: [
+            SizedBox(height: 10),
+            Center(
+              child: CircleAvatar(
+                radius: 40,
+                backgroundImage: AssetImage('assets/images/apple.jpg.webp'),
+              ),
+            ),
             ListTile(
               title: Text('Logout'),
               trailing: Icon(Icons.logout),
